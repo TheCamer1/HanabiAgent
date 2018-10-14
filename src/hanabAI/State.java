@@ -84,19 +84,20 @@ public class State implements Cloneable{
          s.fuse--;
        }
        if(!deck.isEmpty()) s.hands[action.getPlayer()][action.getCard()] = deck.pop();
-       if(deck.isEmpty()){
-        if(finalAction==-1) s.finalAction = order+players.length;
+       else if(deck.isEmpty()){
         s.hands[action.getPlayer()][action.getCard()] = null;
+       }
+       if(deck.isEmpty() && finalAction == -1) s.finalAction = order+players.length;
        }
        break;  
      case DISCARD:
        c = hands[action.getPlayer()][action.getCard()];
        s.discards.push(c);
        if(!deck.isEmpty()) s.hands[action.getPlayer()][action.getCard()] = deck.pop();
-       if(deck.isEmpty()){
-        if(finalAction==-1) s.finalAction = order+players.length;
+       else if(deck.isEmpty()){
         s.hands[action.getPlayer()][action.getCard()] = null;
        }
+       if(deck.isEmpty() && finalAction == -1) s.finalAction = order+players.length;
        if(hints<8) s.hints++;
        break;
      case HINT_COLOUR: 
