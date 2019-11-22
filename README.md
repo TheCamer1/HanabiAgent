@@ -1,5 +1,5 @@
 # HanabAI
-This is an AI agent for the card game Hanabi. See Agent21958958.java for the code. 
+This is an AI agent for the card game Hanabi. Run /HanabiAgent/src/hanabAI/Hanabi.java to complete a 3 player game where each agent is Agent21958958.java.  
 
 # Rules
 
