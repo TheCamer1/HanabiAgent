@@ -1,5 +1,5 @@
 # HanabAI
-AI platform for the card game Hanabi.
+This is an AI agent for the card game Hanabi. See Agent21958958.java for the code. 
 
 # Rules
 
